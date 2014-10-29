@@ -1,0 +1,33 @@
+{
+  "name": "lightiot",
+  "version": "0.0.1",
+  "description": "A lightweight iot system.",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bloomlj/lightiot.git"
+  },
+  "keywords": [
+    "iot",
+    "internet",
+    "of",
+    "thing",
+    "wsn",
+    "sensor"
+  ],
+  "author": "bloomlj",
+  "license": "GPLv2",
+  "bugs": {
+    "url": "https://github.com/bloomlj/lightiot/issues"
+  },
+  "homepage": "https://github.com/bloomlj/lightiot",
+  "dependencies": {
+    "express": "~4.10.1"
+  }
+}
