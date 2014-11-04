@@ -1,8 +1,8 @@
 -- --------------------------------------------------------
--- 主机:                           127.0.0.1
--- 服务器版本:                        5.5.5-10.0.8-MariaDB - mariadb.org binary distribution
--- 服务器操作系统:                      Win64
--- HeidiSQL 版本:                  8.0.0.4396
+-- Host:                         127.0.0.1
+-- Server version:               5.5.5-10.0.14-MariaDB - mariadb.org binary distribution
+-- Server OS:                    Win32
+-- HeidiSQL Version:             8.3.0.4694
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -10,13 +10,13 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
--- 导出 lightiot 的数据库结构
+-- Dumping database structure for lightiot
 DROP DATABASE IF EXISTS `lightiot`;
 CREATE DATABASE IF NOT EXISTS `lightiot` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `lightiot`;
 
 
--- 导出  表 lightiot.devices 结构
+-- Dumping structure for table lightiot.devices
 DROP TABLE IF EXISTS `devices`;
 CREATE TABLE IF NOT EXISTS `devices` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
@@ -29,10 +29,10 @@ CREATE TABLE IF NOT EXISTS `devices` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- 数据导出被取消选择。
+-- Data exporting was unselected.
 
 
--- 导出  表 lightiot.device_category 结构
+-- Dumping structure for table lightiot.device_category
 DROP TABLE IF EXISTS `device_category`;
 CREATE TABLE IF NOT EXISTS `device_category` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
@@ -40,10 +40,10 @@ CREATE TABLE IF NOT EXISTS `device_category` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- 数据导出被取消选择。
+-- Data exporting was unselected.
 
 
--- 导出  表 lightiot.sensors 结构
+-- Dumping structure for table lightiot.sensors
 DROP TABLE IF EXISTS `sensors`;
 CREATE TABLE IF NOT EXISTS `sensors` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
@@ -55,10 +55,10 @@ CREATE TABLE IF NOT EXISTS `sensors` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- 数据导出被取消选择。
+-- Data exporting was unselected.
 
 
--- 导出  表 lightiot.sensor_category 结构
+-- Dumping structure for table lightiot.sensor_category
 DROP TABLE IF EXISTS `sensor_category`;
 CREATE TABLE IF NOT EXISTS `sensor_category` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
@@ -66,19 +66,19 @@ CREATE TABLE IF NOT EXISTS `sensor_category` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- 数据导出被取消选择。
+-- Data exporting was unselected.
 
 
--- 导出  表 lightiot.sensor_data 结构
+-- Dumping structure for table lightiot.sensor_data
 DROP TABLE IF EXISTS `sensor_data`;
 CREATE TABLE IF NOT EXISTS `sensor_data` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `sensor_id` int(10) DEFAULT NULL,
-  `json` varchar(255) DEFAULT NULL,
+  `data` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- 数据导出被取消选择。
+-- Data exporting was unselected.
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
