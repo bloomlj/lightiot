@@ -7,7 +7,7 @@ router.get('/', function(req, res) {
   knex.select('*').from('devices')
   .then(function(rows) {
    console.log(rows);
-   res.render('devices/index', { title: 'devices list' });
+   res.render('devices/index', {'rows':rows});
   });
     
   //res.send('respond with a resource');
@@ -15,7 +15,7 @@ router.get('/', function(req, res) {
 
 /* create a device form. */
 router.get('/createform', function(req, res) {
-
+    
    res.render('devices/createform', { title: 'Express' });
     
 });
@@ -27,7 +27,7 @@ router.get('/:id', function(req, res) {
   knex('devices').where('id', req.params.id)
   .then(function(rows) {
    console.log(rows);
-   res.render('devices/detail', { title: 'Express' });
+   res.render('devices/detail', { row: rows[0] });
   });
     
     
@@ -77,9 +77,9 @@ router.post('/', function(req, res) {
       knex('devices')
      .insert(req.body)
  // .insert([{name: 'pir'},{name: 'camera'}])
-    .then(function(ret){
-    console.log(ret);
-        res.send('respond with a resource'+ret);
+     .then(function(ret){
+        console.log(ret);
+        res.redirect('/devices');
     });
     //console.log(req);
   //res.send('respond with a resource'+req.params.id);
