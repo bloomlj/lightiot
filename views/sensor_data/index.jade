@@ -1,0 +1,12 @@
+extends ../layout
+
+block content
+  h1 Sensor datas
+  table
+    tr
+        th sensor_id
+        th data
+    each row in rows
+        tr
+            td= row.sensor_id
+            td= row.data

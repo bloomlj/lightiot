@@ -1,0 +1,1 @@
+curl  -d  'sensor_id=1&data={"speed":"15","tmp":"10"}'  http://192.168.1.52/sensor_data/api
